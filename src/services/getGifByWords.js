@@ -10,7 +10,7 @@ function searchGifByQuery({ query = "" }) {
   uri.append("q", query);
   uri.append("limit", 1);
 
-  return fetch(`http://api.giphy.com/v1/gifs/search?${uri.toString()}`)
+  return fetch(`https://api.giphy.com/v1/gifs/search?${uri.toString()}`)
     .then((bodyResponse) => bodyResponse.json())
     .then((response) => {
       const { data } = response;
